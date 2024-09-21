@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #FFEAC5;
+}
+
+/* Navigation */
+
+header{ 
+    height: 70px; 
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #FFEAC5;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;  
+}
+
+nav ul li{
+    margin:0 5px;
+}
+
+nav ul a{
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: #494234;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul a::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0px;
+    border-radius: 20px;
+    background-color: #7EACB5;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+nav ul a:hover:after{
+    width: 100%;
+}
+
+
+/* About Page */
+
+main{
+    display: flex;
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.content-left {
+    width: 50%;
+}
+
+main h1{
+    font-size: 50px;
+    color: #C96868;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+main h2{
+    font-size: 25px;
+    color: #7EACB5;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main p{
+    font-size: 18px;
+    color: #494234;
+    font-weight: 400;
+    line-height: 30px 0;
+}
+
+.learn-more-btn {
+    background-color: #C96868; 
+    color: #FFEAC5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.watch-btn {
+    background-color: #C96868; 
+    color: #FFEAC5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; 
+    font-size: 16px;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.watch-btn:hover, .learn-more-btn:hover {
+    background-color: #7EACB5;
+}
+
+
+/* Ghibli Films */
+
+
+h1 {
+    color: #C96868;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.film {
+    background-color: #FFF9D0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.film img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.film h2 {
+    flex: 5; 
+    margin-top: 10px; 
+    font-size: 20px; 
+    text-align: center; 
+    color: #7EACB5;
+}
+
+.film p {
+    flex: 5; 
+    margin: 10px; 
+    font-size: 18px; 
+    text-align: center; 
+    color: #603F26;
+}
+
+
+/* Ghibli Author's */
+
+
+h1 {
+    text-align: center; 
+    width: 100%; 
+    margin-top: 20px; 
+    margin-bottom: 5px; 
+}
+
+.authors-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+    width: 100%;  
+}
+
+.author-box {
+    display: flex; 
+    align-items: center; 
+    width: 1000px; 
+    margin: 10px; 
+    padding: 15px; 
+    background-color: #FFF9D0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.author-box img {
+    width: 150px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.author-box h2 {
+    flex: 5; 
+    margin: 0; 
+    font-size: 25px; 
+    text-align: justify; 
+    color: #7EACB5;
+}
+
+.author-box p {
+    flex: 5; 
+    margin: 0; 
+    font-size: 18px; 
+    text-align: justify; 
+    color: #603F26;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: #6C4E31;
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    padding: 3rem 1rem;
+}
+
+.container {
+   max-width: 1140px;
+   margin: 10 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.row{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.col{
+   min-width: 250px;
+   color:#FEF9D9;
+   padding:0 2rem;
+   font-size: 17px;
+}
+
+.col .logo{
+   width: 200px;
+   margin-bottom:25px;
+}
+
+.col h3{
+   color:#FADFA1;
+   margin-bottom: 20px;
+   position: relative;
+   cursor: pointer;
+   font-size: 25px;
+}
+
+.col h3::after{
+   content: '';
+   height:3px;
+   width:0px;
+   background-color: #C96868;
+   position: absolute;
+   bottom: 0;
+   left:0;
+   transition: 0.5s ease;
+}
+
+.col h3:hover::after{
+   width:40%;
+}
+
+.col .social a i{
+   color:#FADFA1;
+   margin-top:2rem;
+   margin-right: 5px;
+   transition: 0.3s ease;
+   font-size: 25px;
+   
+}
+.col .social a i:hover{
+   transform: scale(1.5);
+   filter:grayscale(25);
+}
+
+.col .links a{
+   display: block;
+   text-decoration: none;
+   color:#FEF9D9;
+   margin-bottom: 5px;
+   position: relative;
+   transition: 0.3s ease;
+}
+
+.col .links a::before{
+   content:'';
+   height: 16px;
+   width:3px;
+   position: absolute;
+   top:5px;
+   left:-10px;
+   background-color: #7EACB5;
+   transition: 0.5s ease;
+   opacity: 0;
+}
+
+.col .links a:hover::before{
+   opacity: 1;
+}
+
+.col .links a:hover{
+   transform: translateX(-8px);
+   color:#7EACB5;
+}
+
+.col .contact-details{
+   display: inline-flex;
+   justify-content: space-between;
+}
+
+.col .contact-details i{
+   margin-right:15px;
+}
+
+.row .form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding:2rem 0;
+}
+
+.row .form input{
+   background-color: #FEF9D9; 
+   border:0;
+   outline:none;
+   padding:14px 20px;
+   border-radius: 6px;
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+}
+.form button{
+   padding:14px 20px;
+   border:0;
+   border-radius: 6px;
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+   background-color: #FADFA1;
+}
+
+@media(max-width:900px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .col{
+   width: 100%;
+   text-align: left;
+   margin-bottom: 25px;
+ }
+}
+@media(max-width:768px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .col{
+   width: 100%;
+   text-align: left;
+   margin-bottom: 20px;
+ }
+}
+
